@@ -41,20 +41,22 @@
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:hint="EURO"
             android:id="@+id/userinput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
+            android:hint="EURO"
             android:inputType="number"
-            android:layout_height="wrap_content"/>
+            tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/spr"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </androidx.appcompat.widget.AppCompatSpinner>
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck"></androidx.appcompat.widget.AppCompatSpinner>
 
     <Button
         android:layout_width="match_parent"
@@ -70,7 +72,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="22sp"
-        android:text="TextView" />
+        android:textSize="22sp" />
 
 </LinearLayout>

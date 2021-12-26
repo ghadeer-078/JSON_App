@@ -2,7 +2,7 @@ package com.example.jsonapp
 
 import com.google.gson.annotations.SerializedName
 
-class Datum(var date: String?,var eur: Cur?) {
+class Datum(var date: String?, var eur: Cur?) {
 
     class Cur {
 

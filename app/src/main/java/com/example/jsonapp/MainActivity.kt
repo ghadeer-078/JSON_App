@@ -1,5 +1,6 @@
 package com.example.jsonapp
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val cur = arrayListOf("inr", "usd", "aud", "sar", "cny", "jpy")
 
-        var selected: Int = 0
+        var selected = 0
 
         if (spinner != null) {
             val adapter = ArrayAdapter(
@@ -41,15 +42,14 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
-                    TODO("Not yet implemented")
                 }
             }
         }
 
         convrt.setOnClickListener {
 
-            var sel = userinp.text.toString()
-            var currency: Double = sel.toDouble()
+            val sel = userinp.text.toString()
+            val currency: Double = sel.toDouble()
 
             getCurrency(onResult = {
                 curencyDetails = it
@@ -66,10 +66,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun disp(calc: Double) {
 
         val responseText = findViewById<TextView>(R.id.textView3)
-        responseText.text = "result " + calc
+        responseText.text = "result $calc"
     }
 
     private fun calc(i: Double?, sel: Double): Double {
@@ -101,7 +102,6 @@ class MainActivity : AppCompatActivity() {
             })
         }
     }
-
 
 
 }
